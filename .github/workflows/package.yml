@@ -21,4 +21,4 @@ jobs:
           RELEASE_BRANCHES: master
           WITH_V: true
       - name: 'version'
-        run: echo new_tag
+        run: echo "new tag is: ${{ steps.anothrNick.outputs.new_tag }}"
