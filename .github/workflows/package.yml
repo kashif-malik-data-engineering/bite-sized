@@ -21,5 +21,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_BRANCHES: master
           WITH_V: true
- #     - name: 'version'
-      - run: echo "new tag is: ${{ steps.tagversion.outputs.new_tag }}"
+      - name: 'version'
+        run: |
+          echo "new tag is: ${{ steps.tagversion.outputs.new_tag }}"
