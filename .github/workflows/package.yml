@@ -13,6 +13,7 @@ jobs:
         with:
           fetch-depth: '0'
       - name: Bump version and push tag
+        id: tagversion
         uses: anothrNick/github-tag-action@1.17.2
         env:
           DEFAULT_BUMP: patch
@@ -21,4 +22,4 @@ jobs:
           RELEASE_BRANCHES: master
           WITH_V: true
       - name: 'version'
-        run: echo "new tag is: ${{ steps.anothrNick.outputs.new_tag }}"
+        run: echo "new tag is: ${{ steps.tagversion.outputs.new_tag }}"
