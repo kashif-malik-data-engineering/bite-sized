@@ -10,5 +10,5 @@ endif
 
 .PHONY: version
 version:
-	@echo $(VERSION) $(GIT_TAG_NAME)
+	@echo $(VERSION) $(VERSION2)
 
