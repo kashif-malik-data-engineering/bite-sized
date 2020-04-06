@@ -1,6 +1,6 @@
 
 VERSION ?= $(shell git rev-parse --short HEAD)
-VERSION2 ?= $(GITHUB_REF)
+VERSION2 ?= $(GIT_TAG_NAME)
 ifdef GITHUB_REF
 GITHUB_REF_VERSION := $(shell [[ $(GITHUB_REF) =~ ^refs/tags/v[0-9.]+$ ]] && echo matched)
 ifdef GITHUB_REF_VERSION
@@ -10,5 +10,5 @@ endif
 
 .PHONY: version
 version:
-	@echo $(VERSION) $(VERSION2)
+	@echo $(VERSION) $(GIT_TAG_NAME)
 
