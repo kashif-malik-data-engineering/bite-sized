@@ -10,8 +10,6 @@ jobs:
     steps:
       - uses: olegtarasov/get-tag@v2
         id: tagName
-        with:
-          tagRegex: "refs/tags/v(.*)"
       - name: 'checkout'
         uses: actions/checkout@v2
         with:
