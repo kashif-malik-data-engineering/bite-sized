@@ -20,7 +20,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_BRANCHES: master
           WITH_V: true
-      - uses: olegtarasov/get-tag@v2
-        id: tagName
       - name: 'version'
-        run: make version
+        run: echo new_tag
