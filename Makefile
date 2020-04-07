@@ -4,7 +4,7 @@ GITHUB_TAG_LATEST := $(GIT_TAG_NAME)
 ifdef GITHUB_TAG_LATEST
 GITHUB_TAG_VERSION := $(shell [[ $(GITHUB_TAG_LATEST) =~ ^v[0-9.]+$$ ]] && echo matched)
 ifdef GITHUB_TAG_VERSION
-VERSION := $(subst refs/tags/v,,$(GITHUB_TAG_LATEST))
+VERSION := $(subst v,,$(GITHUB_TAG_LATEST))
 endif
 endif
 
