@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 VERSION ?= $(shell git rev-parse --short HEAD)
 GITHUB_TAG_LATEST := $(GIT_TAG_NAME)
 ifdef GITHUB_TAG_LATEST
