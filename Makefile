@@ -4,7 +4,6 @@ GIT_TAG_VERSION := $(shell [[ $(GIT_TAG_LATEST) =~ ^v[0-9.]+$$ ]] && echo matche
 ifdef GIT_TAG_VERSION
 VERSION := $(subst v,,$(GIT_TAG_LATEST))
 endif
-endif
 
 .PHONY: version
 version:
